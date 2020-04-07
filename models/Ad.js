@@ -10,7 +10,13 @@ const adSchema = mongoose.Schema({
   tags: [String],
 });
 
-/* adSchema.statics.lista = function (filtro, limit, skip, sort, fields) {
+adSchema.statics.list = function (filter) {
+  const query = Ad.find(filter);
+
+  return query.exec();
+};
+
+/* adSchema.statics.list = function (filtro, limit, skip, sort, fields) {
   const query = Ad.find(filtro);
   query.limit(limit);
   query.skip(skip);
