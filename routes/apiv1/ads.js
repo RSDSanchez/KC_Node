@@ -45,6 +45,9 @@ router.get('/', async (req, res, next) => {
   }
 });
 
+/**
+ *  Function to split a price range in **-** format and return a search criteria object
+ */
 const splitRange = (range) => {
   const values = range.split('-');
 
@@ -52,10 +55,5 @@ const splitRange = (range) => {
   if (!values[1]) return { $gt: values[0] };
   if (values[0] && values[1]) return { $lt: values[1], $gt: values[0] };
 };
-
-/**
- *  Show available tags
- * GET /apiv1/ads/tags
- */
 
 module.exports = router;

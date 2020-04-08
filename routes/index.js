@@ -3,7 +3,9 @@ var router = express.Router();
 
 const Ad = require('../models/Ad');
 
-/* GET home page. */
+/**
+ *  Show Ads in Index
+ */
 router.get('/', async (req, res, next) => {
   try {
     const tagsAvailable = await Ad.distinct('tags');
@@ -45,6 +47,9 @@ router.get('/', async (req, res, next) => {
   }
 });
 
+/**
+ *  Function to split a price range in **-** format and return a search criteria object
+ */
 const splitRange = (range) => {
   const values = range.split('-');
 

@@ -6,8 +6,8 @@ const router = express.Router();
 const Ad = require('../../models/Ad');
 
 /**
- * Show available tags
- * GET /apiv1/tags/
+ *  Show available tags
+ * GET /apiv1/ads/tags
  */
 
 router.get('/', async (req, res, next) => {
