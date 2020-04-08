@@ -10,20 +10,15 @@ const adSchema = mongoose.Schema({
   tags: [String],
 });
 
-adSchema.statics.list = function (filter) {
+adSchema.statics.list = function (filter, limit, skip, sort, fields) {
   const query = Ad.find(filter);
-
-  return query.exec();
-};
-
-/* adSchema.statics.list = function (filtro, limit, skip, sort, fields) {
-  const query = Ad.find(filtro);
   query.limit(limit);
   query.skip(skip);
   query.sort(sort);
   query.select(fields);
+
   return query.exec();
-}; */
+};
 
 const Ad = mongoose.model('Ad', adSchema);
 

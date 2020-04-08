@@ -9,9 +9,33 @@
     <p><%= title %></p>
 
     <h2>ADS</h2>
-    <% ads.forEach( ad => { %>
-    <p><%= ad.name + ' ' + ad.price%></p>
-    <% }) %>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Type</th>
+        <th>Tags</th>
+        <th>Picture</th>
+      </tr>
+      <% ads.forEach( ad => { %>
+      <tr>
+        <td><%= ad.name%></td>
+        <td><%= ad.price%></td>
+        <td><%= ad.type%></td>
+        <td><%= ad.tags%></td>
+        <td><%= ad.picture%></td>
+      </tr>
+      <% }) %>
+    </table>
+    <% if (ads.length === 0) { %>
+    <p>No hay resultados con los parámetros de búsqueda especificados. Comprueba que:</p>
+    <ul>
+      <li>El valor de <i>Type</i> es <i>sell</i> o <i>buy</i></li>
+      <li><i>tag</i> está entre los valores disponibles: <i><%= tagsAvailable %></i></li>
+      <li>El formato de <i>price</i> es <i>'x'</i> o <i>'x-y'</i> o <i>'x-'</i> o <i>'-y'</i></li>
+    </ul>
+    <p>Si lo anterior es correcto, no hay resultados por los términos de búsqueda utilizados.</p>
+    <% } %>
 
     <script>
       console.log('hola');
