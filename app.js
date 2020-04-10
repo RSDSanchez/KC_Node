@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var app = express();
 
-// conectar a la BBDD
+// connect Data Base
 require('./lib/connectMongoose');
 
 // view engine setup
@@ -31,7 +31,7 @@ app.locals.title = 'NodePOP';
 app.use('/', require('./routes/index'));
 
 /**
- *  API
+ *  API ROUTES
  */
 app.use('/apiv1/ads', require('./routes/apiv1/ads'));
 app.use('/apiv1/tags', require('./routes/apiv1/tags'));
