@@ -46,6 +46,23 @@ router.get('/', async (req, res, next) => {
 });
 
 /**
+ *  Create a new Ad
+ *  POST /apiv1/ads
+ */
+router.post('/', async (req, res, next) => {
+  try {
+    const adData = req.body;
+
+    const ad = new Ad(adData);
+
+    const saveAd = await ad.save();
+    res.status(201).json({ result: 'ok', ad: saveAd });
+  } catch (error) {
+    next(error);
+  }
+});
+
+/**
  *  Function to split a price range in **-** format and return a search criteria object
  */
 const splitRange = (range) => {
