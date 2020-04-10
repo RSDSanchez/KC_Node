@@ -20,80 +20,70 @@ const initAds = async () => {
       name: 'iPhone XS',
       type: 'buy',
       price: 900,
-      picture:
-        'https://www.tuimeilibre.com/4075-large_default/apple-iphone-11-64gb-negro-libre.jpg',
+      picture: 'iphonexs.jpg',
       tags: ['mobile'],
     },
     {
       name: 'iPhone 11',
       type: 'buy',
       price: 1200,
-      picture:
-        'https://www.tuimeilibre.com/4075-large_default/apple-iphone-11-64gb-negro-libre.jpg',
+      picture: 'iphone11.jpg',
       tags: ['mobile'],
     },
     {
       name: 'MacBook Pro 16',
       type: 'sell',
       price: 2500,
-      picture:
-        'https://www.tuimeilibre.com/4075-large_default/apple-iphone-11-64gb-negro-libre.jpg',
+      picture: 'macbookpro16.jpg',
       tags: ['work'],
     },
     {
       name: 'iPhone 11',
       type: 'sell',
       price: 1000,
-      picture:
-        'https://www.tuimeilibre.com/4075-large_default/apple-iphone-11-64gb-negro-libre.jpg',
+      picture: 'iphone11.jpg',
       tags: ['mobile'],
     },
     {
       name: 'iPad Air',
       type: 'sell',
       price: 500,
-      picture:
-        'https://www.tuimeilibre.com/4075-large_default/apple-iphone-11-64gb-negro-libre.jpg',
+      picture: 'ipadair.jpg',
       tags: ['mobile'],
     },
     {
       name: 'iPad Pro',
       type: 'buy',
       price: 1100,
-      picture:
-        'https://www.tuimeilibre.com/4075-large_default/apple-iphone-11-64gb-negro-libre.jpg',
+      picture: 'ipadpro.jpg',
       tags: ['work'],
     },
     {
-      name: 'iWatch Serie 3',
+      name: 'Apple Watch Serie 3',
       type: 'sell',
       price: 250,
-      picture:
-        'https://www.tuimeilibre.com/4075-large_default/apple-iphone-11-64gb-negro-libre.jpg',
+      picture: 'applewatchs3.jpg',
       tags: ['lifestyle'],
     },
     {
       name: 'iWatch Serie 5',
       type: 'buy',
       price: 500,
-      picture:
-        'https://www.tuimeilibre.com/4075-large_default/apple-iphone-11-64gb-negro-libre.jpg',
+      picture: 'applewatchs5.jpg',
       tags: ['lifestyle'],
     },
     {
       name: 'MacBook Air (new)',
       type: 'buy',
       price: 900,
-      picture:
-        'https://www.tuimeilibre.com/4075-large_default/apple-iphone-11-64gb-negro-libre.jpg',
+      picture: 'macbookairnew.jpg',
       tags: ['work'],
     },
     {
       name: 'MacBook Air',
       type: 'buy',
       price: 1200,
-      picture:
-        'https://www.tuimeilibre.com/4075-large_default/apple-iphone-11-64gb-negro-libre.jpg',
+      picture: 'macbookair.jpg',
       tags: ['work'],
     },
   ]);
