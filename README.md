@@ -1,6 +1,6 @@
 # NodePOP
 
-NodePOP is an advertisment API where you can look for different articles, filter and order them. You can also vreate new articles.
+NodePOP is an advertisment API where you can look for different articles, filter and order them. You can also create new articles.
 
 ## Installation
 
@@ -22,9 +22,9 @@ npm run install-db
 
 - **/** --> From the web browser, you can see the Ads and query from the search bar.
 
-- **/apiv1/ads** --> Endpoint to receive the answer in JSON format. See API Methods available
+- **/apiv1/ads** --> Endpoint to receive the answer in JSON format. See _API Methods_ available
 
-- **/apiv1/tags** --> Endpoint to Llook for available tags to search or use
+- **/apiv1/tags** --> Endpoint to look for available tags to search or use
 
 ## API Methods
 
@@ -59,7 +59,7 @@ POST /apiv1/ads
 **Body keys**
 
 - name: String
-- type: String (sell or buy)
+- type: String (_sell_ or _buy_)
 - price: Number
 - picture: String (image name saved in /public/images)
 - tags: [String] See _Available Tags Endpoint_
@@ -107,3 +107,5 @@ You can filter the results from both, the web browser and the API. For that, you
 - **skip**: you can skip results by specifying a number
 - **sort**: you can sort by a field
 - **fields**: you can specify wicho field receive
+
+If the search ends with no results, you will receive an empty array from the API and an information message with instructions fromm the web browser.
