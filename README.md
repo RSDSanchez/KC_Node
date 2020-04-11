@@ -1,6 +1,6 @@
 # NodePOP
 
-NodePOP is an advertisment API where you can look for different articles, filter and order them. You can also create new articles.
+NodePOP is an advertisement API where you can look for different articles, filter and order them. You can also create new articles.
 
 ## Installation
 
@@ -97,15 +97,15 @@ Answer example:
 
 ## Filter results
 
-You can filter the results from both, the web browser and the API. For that, you can use the next querie parameters:
+You can filter the results from both, the web browser and the API. For that, you can use the next queries parameters:
 
 - **name**: searches for articles that contains the string.
 - **type**: can only receive _sell_ or _buy_. Searches for articles with the selected type.
 - **price**: can search for articles with a specific price or between a range of prices. Search examples: 500, 500-1000, -1000, 500-
-- **tag**: searches for all articles thar match the tag specified. Look at _Available tags_
+- **tag**: searches for all articles that match the tag specified. Look at _Available tags_
 - **limit**: by default, the answer is limited to 10 articles, you can change this by specifying a number.
 - **skip**: you can skip results by specifying a number
 - **sort**: you can sort by a field
-- **fields**: you can specify wicho field receive
+- **fields**: you can specify wich field receive
 
-If the search ends with no results, you will receive an empty array from the API and an information message with instructions fromm the web browser.
+If the search ends with no results, you will receive an empty array from the API and an information message with instructions from the web browser.
