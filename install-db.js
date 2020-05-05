@@ -1,11 +1,15 @@
 'use strict';
 
+require('dotenv').config();
+
 const conn = require('./lib/connectMongoose');
 const Ad = require('./models/Ad');
+const User = require('./models/User');
 
 conn.once('open', async () => {
   try {
     await initAds();
+    await initUser();
     conn.close();
   } catch (err) {
     console.error('Hubo un error:', err);
@@ -85,6 +89,16 @@ const initAds = async () => {
       price: 1200,
       picture: 'macbookair.jpg',
       tags: ['work'],
+    },
+  ]);
+};
+
+const initUser = async () => {
+  await User.deleteMany();
+  await User.insertMany([
+    {
+      email: 'user@example.com',
+      password: await User.hashPassword('1234'),
     },
   ]);
 };

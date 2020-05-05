@@ -30,11 +30,15 @@ app.locals.title = 'NodePOP';
  */
 app.use('/', require('./routes/index'));
 
+const loginController = require('./routes/loginController');
+const jwtAuth = require('./lib/jwtAuth');
+
 /**
  *  API ROUTES
  */
-app.use('/apiv1/ads', require('./routes/apiv1/ads'));
-app.use('/apiv1/tags', require('./routes/apiv1/tags'));
+app.use('/apiv1/ads', jwtAuth(), require('./routes/apiv1/ads'));
+app.use('/apiv1/tags', jwtAuth(), require('./routes/apiv1/tags'));
+app.use('/apiv1/login', loginController.postJWT);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -10,6 +10,8 @@ npm install
 
 ```
 
+Rename .env.example to .env and setup the configuration
+
 To initialize the DB with 10 example articles:
 
 ```shell
@@ -17,6 +19,23 @@ To initialize the DB with 10 example articles:
 npm run install-db
 
 ```
+
+To start the application run:
+For productio:
+
+```shell
+npm start
+```
+
+For development:
+
+```shell
+npm run dev
+```
+
+The API is securized with JWT. You can use the test user:
+email: user@example.com
+password: 1234
 
 ## EndPoints
 
