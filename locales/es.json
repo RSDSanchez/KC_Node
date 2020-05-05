@@ -1,3 +1,13 @@
 {
-  "Welcome to": "Bienvenido a"
+  "Welcome to": "Bienvenido a",
+  "Price": "Precio",
+  "Type": "Tipo",
+  "Tags": "Etiquetas",
+  "There are no results with the parameters provided. Make sure that:": "No hay resultados con los parámetros de búsqueda especificados. Comprueba que:",
+  "The value of ": "El valor de ",
+  "is ": "es ",
+  "or": "o",
+  "value is between the ones available ": "está entre los valores disponibles: ",
+  "The format of ": "El formato de ",
+  "If everithing is ok, there are no results with the search terms used ": "Si lo anterior es correcto, no hay resultados por los términos de búsqueda utilizados."
 }

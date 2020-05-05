@@ -1,3 +1,13 @@
 {
-	"Welcome to": "Welcome to"
+  "Welcome to": "Welcome to",
+  "Price": "Price",
+  "Type": "Type",
+  "Tags": "Tags",
+  "There are no results with the parameters provided. Make sure that:": "There are no results with the parameters provided. Make sure that:",
+  "The value of ": "The value of ",
+  "is ": "is ",
+  "or": "or",
+  "value is between the ones available ": "value is between the ones available ",
+  "The format of ": "The format of ",
+  "If everithing is ok, there are no results with the search terms used ": "If everithing is ok, there are no results with the search terms used "
 }

@@ -20,14 +20,14 @@
           </div>
           <div class="info">
             <div class="price">
-              <p>Precio: <%= ad.price%> €</p>
+              <p><%=__('Price')%>: <%= ad.price%> €</p>
             </div>
             <div class="type">
-              <p>Tipo: <%= ad.type%></p>
+              <p><%=__('Type')%>: <%= ad.type%></p>
             </div>
           </div>
           <div class="tags">
-            <small>Tags: <%= ad.tags%></small>
+            <small><%=__('Tags')%>: <%= ad.tags%></small>
           </div>
         </article>
         <% }) %>
@@ -35,13 +35,26 @@
     </main>
 
     <% if (ads.length === 0) { %>
-    <p>No hay resultados con los parámetros de búsqueda especificados. Comprueba que:</p>
+    <p>
+      <%=__('There are no results with the parameters provided. Make sure that:')%>
+    </p>
     <ul>
-      <li>El valor de <i>Type</i> es <i>sell</i> o <i>buy</i></li>
-      <li><i>tag</i> está entre los valores disponibles: <i><%= tagsAvailable %></i></li>
-      <li>El formato de <i>price</i> es <i>'x'</i> o <i>'x-y'</i> o <i>'x-'</i> o <i>'-y'</i></li>
+      <li>
+        <%=__('The value of ') %> <i>Type</i> <%=__('is ')%> <i>sell</i> <%=__('or')%>
+        <i>buy</i>
+      </li>
+      <li>
+        <i>tag</i> <%=__('value is between the ones available ')%> <i><%= tagsAvailable %></i>
+      </li>
+      <li>
+        <%=__('The format of ')%> <i>price</i> <%=__('is ')%> <i>'x'</i> <%=__('or')%> o
+        <i>'x-y'</i> <%=__('or')%> <i>'x-'</i> <%=__('or')%> o
+        <i>'-y'</i>
+      </li>
     </ul>
-    <p>Si lo anterior es correcto, no hay resultados por los términos de búsqueda utilizados.</p>
+    <p>
+      <%=__('If everithing is ok, there are no results with the search terms used ')%>
+    </p>
     <% } %>
   </body>
 </html>

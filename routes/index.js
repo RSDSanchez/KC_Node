@@ -39,8 +39,6 @@ router.get('/', async (req, res, next) => {
     res.locals.ads = await Ad.list(filter, limit, skip, sort, fields);
     res.locals.tagsAvailable = tagsAvailable;
 
-    console.log(filter);
-
     res.render('index');
   } catch (error) {
     next(error);
