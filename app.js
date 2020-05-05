@@ -26,6 +26,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.locals.title = 'NodePOP';
 
 /**
+ * Setup i18n
+ */
+
+const i18n = require('./lib/i18nConfig')();
+app.use(i18n.init);
+
+i18n.setLocale('es');
+console.log(i18n.__('Welcome to'));
+
+/**
  *  WEBSITE ROUTES
  */
 app.use('/', require('./routes/index'));

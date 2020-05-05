@@ -19,8 +19,9 @@ class LoginController {
         error.status = 401;
         res.json({
           error: error.message,
-          description: 'Your request must provide a body with an "email" and a "password" key',
+          description: "Your request must provide a body with an 'email' and a 'password' key",
         });
+        return;
       }
 
       if (!user || !(await bcrypt.compare(password, user.password))) {
@@ -34,7 +35,6 @@ class LoginController {
         expiresIn: '1d',
       });
 
-      // responder
       res.json({ token });
     } catch (error) {
       next(error);
