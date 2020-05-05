@@ -41,17 +41,32 @@ password: 1234
 
 - **/** --> From the web browser, you can see the Ads and query from the search bar.
 
-- **/apiv1/ads** --> Endpoint to receive the answer in JSON format. See _API Methods_ available
+- **/apiv1/login** --> Sending credentials in the body, you will receive a token.
 
-- **/apiv1/tags** --> Endpoint to look for available tags to search or use
+- **/apiv1/ads** --> Endpoint to receive the answer in JSON format. See _API Methods_ available.
+
+- **/apiv1/tags** --> Endpoint to look for available tags to search or use.
 
 ## API Methods
+
+### Get your token
+
+```shell
+POST /apiv1/login
+```
+
+**Body keys**
+
+- email: String
+- password: String
 
 ### Get list of Ads
 
 ```shell
 GET /apiv1/ads
 ```
+
+**You must add your token in any request as a query string, as a header or in the body ( token: your_token )**
 
 Answer example:
 
