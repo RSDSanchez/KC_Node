@@ -7,6 +7,10 @@
   <body>
     <header>
       <h1><%= title %></h1>
+      <p>
+        <%=__('Choose your language: ')%> <% getLocales().forEach( locale => { %>
+        <a href="/changeLang/<%= locale %>"> <%= locale %></a>&nbsp; <% }) %>
+      </p>
     </header>
 
     <main>
@@ -47,8 +51,8 @@
         <i>tag</i> <%=__('value is between the ones available ')%> <i><%= tagsAvailable %></i>
       </li>
       <li>
-        <%=__('The format of ')%> <i>price</i> <%=__('is ')%> <i>'x'</i> <%=__('or')%> o
-        <i>'x-y'</i> <%=__('or')%> <i>'x-'</i> <%=__('or')%> o
+        <%=__('The format of ')%> <i>price</i> <%=__('is ')%> <i>'x'</i> <%=__('or')%>
+        <i>'x-y'</i> <%=__('or')%> <i>'x-'</i> <%=__('or')%>
         <i>'-y'</i>
       </li>
     </ul>

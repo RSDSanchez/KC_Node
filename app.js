@@ -32,13 +32,14 @@ app.locals.title = 'NodePOP';
 const i18n = require('./lib/i18nConfig')();
 app.use(i18n.init);
 
-i18n.setLocale('es');
+i18n.setLocale('en');
 console.log(i18n.__('Welcome to'));
 
 /**
  *  WEBSITE ROUTES
  */
 app.use('/', require('./routes/index'));
+app.use('/changeLang', require('./routes/changeLang'));
 
 const loginController = require('./routes/loginController');
 const jwtAuth = require('./lib/jwtAuth');
