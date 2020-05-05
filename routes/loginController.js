@@ -14,6 +14,15 @@ class LoginController {
 
       const user = await User.findOne({ email });
 
+      if (!email || !password) {
+        const error = new Error('No user or password provided');
+        error.status = 401;
+        res.json({
+          error: error.message,
+          description: 'Your request must provide a body with an "email" and a "password" key',
+        });
+      }
+
       if (!user || !(await bcrypt.compare(password, user.password))) {
         const error = new Error('Invalid credentials');
         error.status = 401;
