@@ -12,7 +12,7 @@ npm install
 
 Rename .env.example to .env and setup the configuration
 
-To initialize the DB with 10 example articles:
+To initialize the DB with 10 example articles and a test user, run:
 
 ```shell
 
@@ -20,21 +20,22 @@ npm run install-db
 
 ```
 
-To start the application run:
-For productio:
+To start the application for production run:
 
 ```shell
 npm start
 ```
 
-For development:
+To start the application for development run:
 
 ```shell
 npm run dev
 ```
 
 The API is securized with JWT. You can use the test user:
+
 email: user@example.com
+
 password: 1234
 
 ## EndPoints
@@ -62,11 +63,11 @@ POST /apiv1/login
 
 ### Get list of Ads
 
+**You must add your token in any request as a query string, as a header or in the body ( token: your_token )**
+
 ```shell
 GET /apiv1/ads
 ```
-
-**You must add your token in any request as a query string, as a header or in the body ( token: your_token )**
 
 Answer example:
 
