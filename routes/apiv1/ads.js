@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const multer = require('multer');
+const cote = require('cote');
 
 const Ad = require('../../models/Ad');
 
@@ -49,8 +51,35 @@ router.get('/', async (req, res, next) => {
  *  Create a new Ad
  *  POST /apiv1/ads
  */
-router.post('/', async (req, res, next) => {
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './public/images');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  },
+});
+
+const upload = multer({ storage });
+
+router.post('/', upload.single('picture'), async (req, res, next) => {
   try {
+    const requester = new cote.Requester({ name: 'thumbnail client' });
+
+    requester.send(
+      {
+        type: 'thumbnail',
+        filename: req.file.originalname,
+        path: req.file.path,
+      },
+      (filename) => {
+        req.body.picture = filename;
+        console.log(req.body);
+      }
+    );
+
+    req.body.picture = req.file.filename;
     const adData = req.body;
 
     const ad = new Ad(adData);
