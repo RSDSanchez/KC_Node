@@ -27,7 +27,10 @@
               <p><%=__('Price')%>: <%= ad.price%> €</p>
             </div>
             <div class="type">
-              <p><%=__('Type')%>: <%= ad.type%></p>
+              <p>
+                <%=__('Type')%>: <% if (ad.type === 'sell') { %> <%=__('Sell')%> <% } else { %>
+                <%=__('Buy')%> <% } %>
+              </p>
             </div>
           </div>
           <div class="tags">
