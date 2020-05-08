@@ -50,6 +50,8 @@ password: 1234
 
 - **/** --> From the web browser, you can see the Ads and query from the search bar.
 
+- **/apiv1/createUser** --> Create a new user
+
 - **/apiv1/login** --> Sending credentials in the body, you will receive a token.
 
 - **/apiv1/ads** --> Endpoint to receive the answer in JSON format. See _API Methods_ available.
@@ -57,6 +59,17 @@ password: 1234
 - **/apiv1/tags** --> Endpoint to look for available tags to search or use.
 
 ## API Methods
+
+### Create a new user
+
+```shell
+POST /apiv1/createUser
+```
+
+**Body keys**
+
+- email: String
+- password: String
 
 ### Get your token
 

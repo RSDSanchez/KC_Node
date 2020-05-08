@@ -10,13 +10,23 @@ const User = require('../../models/User');
 
 router.post('/', async (req, res, next) => {
   try {
-    console.log(req.body);
-    const userData = {
-      email: req.body.email,
-      password: await User.hashPassword(req.body.password),
-    };
+    const email = req.body.email;
+    const password = req.body.password;
 
-    console.log(userData);
+    if (!email || !password) {
+      const error = new Error('No user or password provided');
+      error.status = 401;
+      res.json({
+        error: error.message,
+        description: "Your request must provide a body with an 'email' and a 'password' key",
+      });
+      return;
+    }
+
+    const userData = {
+      email: email,
+      password: await User.hashPassword(password),
+    };
 
     const user = new User(userData);
 
