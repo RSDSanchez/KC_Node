@@ -22,8 +22,16 @@ npm run install-db
 
 To start the application for production run:
 
+- To run only the server:
+
 ```shell
 npm start
+```
+
+- To run the server and the microservice:
+
+```shell
+npm run run-all
 ```
 
 To start the application for development run:

@@ -5,6 +5,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./bin/www",
     "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "run-all": "(cd microservice && npm run start) & npm run start",
     "install-db": "node install-db.js"
   },
   "dependencies": {
