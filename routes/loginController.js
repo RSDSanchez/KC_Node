@@ -27,7 +27,10 @@ class LoginController {
       if (!user || !(await bcrypt.compare(password, user.password))) {
         const error = new Error('Invalid credentials');
         error.status = 401;
-        next(error);
+        res.json({
+          error: error.message,
+          description: 'your email or password are incorrect',
+        });
         return;
       }
 

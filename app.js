@@ -50,6 +50,7 @@ const jwtAuth = require('./lib/jwtAuth');
 app.use('/apiv1/ads', jwtAuth(), require('./routes/apiv1/ads'));
 app.use('/apiv1/tags', jwtAuth(), require('./routes/apiv1/tags'));
 app.use('/apiv1/login', loginController.postJWT);
+app.use('/apiv1/createUser', require('./routes/apiv1/createUser'));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
