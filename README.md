@@ -1,4 +1,4 @@
-# NodePOP
+# Exercise Node - NodePOP
 
 NodePOP is an advertisement API where you can look for different articles, filter and order them. You can also create new articles.
 
