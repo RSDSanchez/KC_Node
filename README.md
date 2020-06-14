@@ -2,6 +2,8 @@
 
 NodePOP is an advertisement API where you can look for different articles, filter and order them. You can also create new articles.
 
+Example at https://nodepop.muutos.digital
+
 ## Installation
 
 ```shell
