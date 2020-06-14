@@ -119,7 +119,7 @@ POST /apiv1/ads
 - name: String
 - type: String (_sell_ or _buy_)
 - price: Number
-- picture: String (image name saved in /public/images)
+- picture: File
 - tags: [String] See _Available Tags Endpoint_
 
 Answer example:
